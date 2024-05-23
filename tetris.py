@@ -264,8 +264,9 @@ class TetrisGame:
                "|--HOLD--|" + "-"*20 + "|--NEXT--|"]
         # for y in range(self.visibleheight):
         #     out.append("|" + "".join([self.chars[tile] for tile in self.board[y]]) + "|")
+        ghost = self.ghostpiece()
         out += [self.playfieldtemplate[y].format("".join(
-            [self.gettile(x,y,*self.ghostpiece()) 
+            [self.gettile(x,y,*ghost) 
                 for x in range(self.boardwidth)]
             )) for y in range(self.visibleheight)]
         out.append("         |" + "-"*20 + "|--------|")
@@ -334,7 +335,7 @@ class TetrisGame:
                         if testy >= self.boardheight - self.visibleheight or self.board[testy][testx] != 0: 
                             done = True
             y += 1
-        return (x,y-2)
+        return (x,y-2) # idk why its -2
     
     def movepiece(self, x = 0, y = 0, dontstick = False):
         newx = self.currentpiecex + x
@@ -351,10 +352,10 @@ class TetrisGame:
                     if y >= self.boardheight - self.visibleheight: 
                         # hit bottom of board
                         self.nextpiece()
-                        return False# cancel movement
+                        return False # cancel movement
                     if self.board[y][x] != 0: 
                         if not dontstick: self.nextpiece()
-                        return  False
+                        return False
                     
         self.currentpiecex = newx
         self.currentpiecey = newy
@@ -374,6 +375,7 @@ class TetrisGame:
                     if x + localx >= self.boardwidth: x -= 1
                     if y + localy < self.visibleheight - self.boardheight: y += 1
                     if y + localy >= self.boardheight - self.visibleheight: y -= 1
+                    if self.board[y][x] != 0: return # idk what to do here? this doesn't even work
                     
         self.currentpiecex = x
         self.currentpiecey = y
@@ -431,5 +433,6 @@ import sys
 sys.stdin.readable
 
 if __name__ == "__main__":
-    TetrisGame((not sys.argv[1].lower().startswith("f")) if len(sys.argv) > 1 else True).run()
+    usecolour = (sys.argv[1] != "0" and not sys.argv[1].lower().startswith("f"))if len(sys.argv) > 1 else True
+    TetrisGame(usecolour).run()
     
