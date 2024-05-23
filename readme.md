@@ -1,4 +1,4 @@
-# its not tetris i sware
+# its not tetris i swear
 
 ~~tetris~~ tetanus on the command line, in python
 
