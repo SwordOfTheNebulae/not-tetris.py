@@ -4,6 +4,7 @@ from pynput.keyboard import Key
 import random
 
 class TetrisGame:
+    version = "0.2"
     boardwidth = 10
     boardheight = 40
     visibleheight = 20
@@ -260,7 +261,7 @@ class TetrisGame:
         return random.sample(range(7),7)
     
     def __str__(self) -> str:
-        out = ["\x1b[38;5;15m-- TETANUS -- V 0.1 -- [?] for controls",
+        out = [f"\x1b[38;5;15m-- TETANUS -- V {self.version} -- [?] for controls",
                "|--HOLD--|" + "-"*20 + "|--NEXT--|"]
         # for y in range(self.visibleheight):
         #     out.append("|" + "".join([self.chars[tile] for tile in self.board[y]]) + "|")
