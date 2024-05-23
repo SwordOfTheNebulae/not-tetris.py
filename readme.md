@@ -26,5 +26,8 @@
  - [ ] levels
  - [ ] UI (timer, score display)
  - [ ] make code not bad
+ - [ ] use different input system that doesn't see keypresses globably (probably kbhit.py)
+
 ---
+### other people's code
 (currently unused) [`kbhit.py`](kbhit.py) by Simon D. Levy https://simondlevy.academic.wlu.edu/software/
