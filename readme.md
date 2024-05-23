@@ -13,5 +13,15 @@
  - esc/f1: pause
  - del: exit
 
+### todo
+ - [ ] pausing
+ - [ ] game over
+ - [ ] do SRS rotation properly https://tetris.fandom.com/wiki/SRS#Wall_Kicks
+ - [ ] T-spins
+ - [ ] line clears
+ - [ ] score
+ - [ ] levels
+ - [ ] UI (timer, score display)
+ - [ ] make code not bad
 ---
 (currently unused) [`kbhit.py`](kbhit.py) by Simon D. Levy https://simondlevy.academic.wlu.edu/software/
