@@ -2,6 +2,9 @@
 
 ~~tetris~~ tetanus on the command line, in python
 
+### requirements
+ - (pynput)[https://pypi.org/project/pynput/]
+
 ### controls: 
  - w/up/x: rotate clockwise
  - a/left: move left
