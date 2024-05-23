@@ -2,6 +2,8 @@
 
 ~~tetris~~ tetanus on the command line, in python
 
+![image of game](gameplay.png)
+
 ### dependencies
  - [pynput](https://pypi.org/project/pynput/)
 
@@ -27,6 +29,7 @@
  - [ ] UI (timer, score display)
  - [ ] make code not bad
  - [ ] use different input system that doesn't see keypresses globably (probably kbhit.py)
+ - [ ] fix block preview (it breaks if a block is under another)
 
 ---
 ### other people's code
