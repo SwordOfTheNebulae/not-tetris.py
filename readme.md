@@ -18,7 +18,7 @@
  - esc/f1: pause
  - del: exit
 
-launch with first paramater matching the following regex to use black and white mode `/^0$|^[Ff]/`
+launch with first paramater matching the following regex to use black and white mode `/^0$|^[Ff].*/`
 
 ### todo
 in no particular order
@@ -39,6 +39,7 @@ in no particular order
  - [ ] prevent black and white mode from sending colour escape codes setting the termninal to white
  - [ ] add option to use ASCII only
  - [ ] add options for various ways to clear the terminal screen for better compatability
+ - [ ] in game options menu?
 
 ---
 ### other people's code
